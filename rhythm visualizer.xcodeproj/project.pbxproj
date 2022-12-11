@@ -14,6 +14,10 @@
 		4770CD2C2946498B008BDAC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4770CD2A2946498B008BDAC3 /* Main.storyboard */; };
 		4770CD382946498B008BDAC3 /* rhythm_visualizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770CD372946498B008BDAC3 /* rhythm_visualizerTests.swift */; };
 		4770CD432946498B008BDAC3 /* rhythm_visualizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770CD422946498B008BDAC3 /* rhythm_visualizerUITests.swift */; };
+		4770CD5429466667008BDAC3 /* NoteParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770CD5329466667008BDAC3 /* NoteParameters.swift */; };
+		4770CD59294667DC008BDAC3 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770CD58294667DC008BDAC3 /* Note.swift */; };
+		4770CD5E29466BC3008BDAC3 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770CD5D29466BC3008BDAC3 /* Track.swift */; };
+		4770CD632946727E008BDAC3 /* Barline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770CD622946727E008BDAC3 /* Barline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		4770CD3E2946498B008BDAC3 /* rhythm visualizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rhythm visualizerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4770CD422946498B008BDAC3 /* rhythm_visualizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rhythm_visualizerUITests.swift; sourceTree = "<group>"; };
 		4770CD442946498B008BDAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4770CD5329466667008BDAC3 /* NoteParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteParameters.swift; sourceTree = "<group>"; };
+		4770CD58294667DC008BDAC3 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		4770CD5D29466BC3008BDAC3 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		4770CD622946727E008BDAC3 /* Barline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barline.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 			children = (
 				4770CD2129464989008BDAC3 /* AppDelegate.swift */,
 				4770CD2329464989008BDAC3 /* ContentView.swift */,
+				4770CD5329466667008BDAC3 /* NoteParameters.swift */,
+				4770CD58294667DC008BDAC3 /* Note.swift */,
+				4770CD5D29466BC3008BDAC3 /* Track.swift */,
+				4770CD622946727E008BDAC3 /* Barline.swift */,
 				4770CD252946498B008BDAC3 /* Assets.xcassets */,
 				4770CD2A2946498B008BDAC3 /* Main.storyboard */,
 				4770CD2D2946498B008BDAC3 /* Info.plist */,
@@ -266,7 +278,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4770CD2429464989008BDAC3 /* ContentView.swift in Sources */,
+				4770CD632946727E008BDAC3 /* Barline.swift in Sources */,
+				4770CD5E29466BC3008BDAC3 /* Track.swift in Sources */,
+				4770CD5429466667008BDAC3 /* NoteParameters.swift in Sources */,
 				4770CD2229464989008BDAC3 /* AppDelegate.swift in Sources */,
+				4770CD59294667DC008BDAC3 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
