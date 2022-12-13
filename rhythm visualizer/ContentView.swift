@@ -9,11 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isPlaying: Bool = false;
+    @State private var timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect();
+    @State private var xVal = 0;
     
     var body: some View {
         VStack{
             PlayButton(isPlaying: $isPlaying); //pass binding
-            Track(isPlaying: $isPlaying);
+            Track(isPlaying: $isPlaying)
+                .offset(x: CGFloat(xVal))
+                .onReceive(timer, perform: { _ in
+                    if (isPlaying) {
+                        xVal -= 2;
+                    }
+                });
         }
 
         

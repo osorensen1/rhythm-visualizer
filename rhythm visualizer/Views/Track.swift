@@ -8,18 +8,15 @@
 import SwiftUI
 
 struct Track: View {
-    //TODO ensure Track is properly receiving isPlaying value
-    //if yes and still not working, debug animation()
     @Binding var isPlaying: Bool;
-    
+
     
     var body: some View {
         ZStack{
             TrackBG()
             Barline()
-            Note().animation(.easeIn)
+            Note()
         }
-
     }
 }
 
