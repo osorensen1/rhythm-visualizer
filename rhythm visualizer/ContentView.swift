@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isPlaying: Bool = false;
+    
     var body: some View {
-        ZStack {
-            Track()
-            Barline()
-            Note()
+        VStack{
+            PlayButton(isPlaying: $isPlaying); //pass binding
+            Track(isPlaying: $isPlaying);
         }
+
+        
     }
+    
 }
 
 
