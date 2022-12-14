@@ -19,6 +19,7 @@
 		4770CD632946727E008BDAC3 /* Barline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770CD622946727E008BDAC3 /* Barline.swift */; };
 		477AD7C429480ED10043E3A1 /* TrackBG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AD7C329480ED10043E3A1 /* TrackBG.swift */; };
 		477AD7CD294810CE0043E3A1 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AD7CC294810CE0043E3A1 /* PlayButton.swift */; };
+		47C0B10F294A6C5000E5005B /* MidiPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0B10E294A6C5000E5005B /* MidiPlayer.swift */; };
 		47E04F0429490D0800250E1C /* NoteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E04F0329490D0800250E1C /* NoteList.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		4770CD622946727E008BDAC3 /* Barline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barline.swift; sourceTree = "<group>"; };
 		477AD7C329480ED10043E3A1 /* TrackBG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackBG.swift; sourceTree = "<group>"; };
 		477AD7CC294810CE0043E3A1 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		47C0B10E294A6C5000E5005B /* MidiPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MidiPlayer.swift; path = Views/MidiPlayer.swift; sourceTree = "<group>"; };
 		47E04F0329490D0800250E1C /* NoteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 		4770CD2029464989008BDAC3 /* rhythm visualizer */ = {
 			isa = PBXGroup;
 			children = (
+				47C0B10E294A6C5000E5005B /* MidiPlayer.swift */,
 				47E04F0329490D0800250E1C /* NoteList.swift */,
 				4770CD2129464989008BDAC3 /* AppDelegate.swift */,
 				4770CD2329464989008BDAC3 /* ContentView.swift */,
@@ -294,6 +297,7 @@
 				4770CD2429464989008BDAC3 /* ContentView.swift in Sources */,
 				477AD7CD294810CE0043E3A1 /* PlayButton.swift in Sources */,
 				4770CD632946727E008BDAC3 /* Barline.swift in Sources */,
+				47C0B10F294A6C5000E5005B /* MidiPlayer.swift in Sources */,
 				47E04F0429490D0800250E1C /* NoteList.swift in Sources */,
 				4770CD5E29466BC3008BDAC3 /* Track.swift in Sources */,
 				477AD7C429480ED10043E3A1 /* TrackBG.swift in Sources */,

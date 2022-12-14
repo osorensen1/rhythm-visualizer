@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var isPlaying: Bool = false;
     @State private var timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect();
     @State private var xVal = 0;
+    @State private var midiUrl = "filepath";
     
     var body: some View {
         VStack{
@@ -26,6 +27,8 @@ struct ContentView: View {
 
         
     }
+    
+    
     
 }
 
