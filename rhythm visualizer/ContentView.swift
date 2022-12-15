@@ -8,23 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isPlaying: Bool = false;
+    //@State private var isPlaying: Bool = false;
     @State private var timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect();
     @State private var xVal = 0;
-    @State private var midiUrl = "filepath";
+    @ObservedObject var midiController = MidiController.init();
+    
     
     var body: some View {
         VStack{
-            PlayButton(isPlaying: $isPlaying); //pass binding
-            Track(isPlaying: $isPlaying)
+            PlayButton(player : $midiController.player);
+            Track()
                 .offset(x: CGFloat(xVal))
                 .onReceive(timer, perform: { _ in
-                    if (isPlaying) {
+                    if (midiController.player.isPlaying) {
                         xVal -= 2;
                     }
                 });
         }
-
+        
         
     }
     

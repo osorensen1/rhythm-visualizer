@@ -6,13 +6,22 @@
 //
 
 import SwiftUI
+import AVFoundation.AVFAudio
+
 
 struct PlayButton: View {
-    @Binding var isPlaying: Bool; //connected to isPlaying in ContentView
+    @Binding var player: AVMIDIPlayer; //connected to isPlaying in ContentView
     
     var body: some View {
-        Button(isPlaying ? "Pause" : "Play") {
-            isPlaying.toggle();
+        Button(player.isPlaying ? "Pause" : "Play") {
+            if (player.isPlaying) {
+                player.stop();
+                print("stopped");
+            } else {
+                player.prepareToPlay();
+                player.play();
+                print("playing");
+            }
         }
         
     }
@@ -20,6 +29,6 @@ struct PlayButton: View {
 
 struct PlayButton_Previews: PreviewProvider {
     static var previews: some View {
-        PlayButton(isPlaying: .constant(false))
+        PlayButton(player: .constant(AVMIDIPlayer()))
     }
 }
