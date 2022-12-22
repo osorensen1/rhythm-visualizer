@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		473607282954CFEC009D6647 /* TrackBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473607272954CFEC009D6647 /* TrackBuilder.swift */; };
+		473608AF2954ED40009D6647 /* MIKMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473608A32954ECA8009D6647 /* MIKMIDI.framework */; };
+		473608B02954ED40009D6647 /* MIKMIDI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 473608A32954ECA8009D6647 /* MIKMIDI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4770CD2229464989008BDAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770CD2129464989008BDAC3 /* AppDelegate.swift */; };
 		4770CD2429464989008BDAC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770CD2329464989008BDAC3 /* ContentView.swift */; };
 		4770CD262946498B008BDAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4770CD252946498B008BDAC3 /* Assets.xcassets */; };
@@ -25,6 +28,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		473608A22954ECA8009D6647 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 473608982954ECA8009D6647 /* MIKMIDI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D74EEA517A7129300BEE89F;
+			remoteInfo = MIKMIDI;
+		};
+		473608A42954ECA8009D6647 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 473608982954ECA8009D6647 /* MIKMIDI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9DAF8B061A7AFF1100F46528;
+			remoteInfo = "MIKMIDI-iOS";
+		};
+		473608A62954ECA8009D6647 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 473608982954ECA8009D6647 /* MIKMIDI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D4DF13A1AAB57430065F004;
+			remoteInfo = "MIKMIDI Tests";
+		};
 		4770CD342946498B008BDAC3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4770CD1629464989008BDAC3 /* Project object */;
@@ -41,7 +65,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		473608B12954ED40009D6647 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				473608B02954ED40009D6647 /* MIKMIDI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		473607272954CFEC009D6647 /* TrackBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackBuilder.swift; sourceTree = "<group>"; };
+		473608982954ECA8009D6647 /* MIKMIDI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MIKMIDI.xcodeproj; path = Frameworks/MIKMIDI/Framework/MIKMIDI.xcodeproj; sourceTree = "<group>"; };
 		4770CD1E29464989008BDAC3 /* rhythm visualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rhythm visualizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4770CD2129464989008BDAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4770CD2329464989008BDAC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				473608AF2954ED40009D6647 /* MIKMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,13 +132,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		473608992954ECA8009D6647 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				473608A32954ECA8009D6647 /* MIKMIDI.framework */,
+				473608A52954ECA8009D6647 /* MIKMIDI.framework */,
+				473608A72954ECA8009D6647 /* MIKMIDI Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		473608AE2954ED40009D6647 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4770CD1529464989008BDAC3 = {
 			isa = PBXGroup;
 			children = (
+				473608982954ECA8009D6647 /* MIKMIDI.xcodeproj */,
 				4770CD2029464989008BDAC3 /* rhythm visualizer */,
 				4770CD362946498B008BDAC3 /* rhythm visualizerTests */,
 				4770CD412946498B008BDAC3 /* rhythm visualizerUITests */,
 				4770CD1F29464989008BDAC3 /* Products */,
+				473608AE2954ED40009D6647 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				47C0B10E294A6C5000E5005B /* MidiController.swift */,
+				473607272954CFEC009D6647 /* TrackBuilder.swift */,
 				47B85258294B98CF005FD19C /* mary.mid */,
 				47E04F0329490D0800250E1C /* NoteList.swift */,
 				4770CD2129464989008BDAC3 /* AppDelegate.swift */,
@@ -177,12 +238,15 @@
 				4770CD1A29464989008BDAC3 /* Sources */,
 				4770CD1B29464989008BDAC3 /* Frameworks */,
 				4770CD1C29464989008BDAC3 /* Resources */,
+				473608B12954ED40009D6647 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "rhythm visualizer";
+			packageProductDependencies = (
+			);
 			productName = "rhythm visualizer";
 			productReference = 4770CD1E29464989008BDAC3 /* rhythm visualizer.app */;
 			productType = "com.apple.product-type.application";
@@ -254,8 +318,16 @@
 				Base,
 			);
 			mainGroup = 4770CD1529464989008BDAC3;
+			packageReferences = (
+			);
 			productRefGroup = 4770CD1F29464989008BDAC3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 473608992954ECA8009D6647 /* Products */;
+					ProjectRef = 473608982954ECA8009D6647 /* MIKMIDI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4770CD1D29464989008BDAC3 /* rhythm visualizer */,
@@ -264,6 +336,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		473608A32954ECA8009D6647 /* MIKMIDI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MIKMIDI.framework;
+			remoteRef = 473608A22954ECA8009D6647 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		473608A52954ECA8009D6647 /* MIKMIDI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MIKMIDI.framework;
+			remoteRef = 473608A42954ECA8009D6647 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		473608A72954ECA8009D6647 /* MIKMIDI Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "MIKMIDI Tests.xctest";
+			remoteRef = 473608A62954ECA8009D6647 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4770CD1C29464989008BDAC3 /* Resources */ = {
@@ -307,6 +403,7 @@
 				477AD7C429480ED10043E3A1 /* TrackBG.swift in Sources */,
 				4770CD2229464989008BDAC3 /* AppDelegate.swift in Sources */,
 				4770CD59294667DC008BDAC3 /* Note.swift in Sources */,
+				473607282954CFEC009D6647 /* TrackBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +487,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -451,6 +549,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

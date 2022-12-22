@@ -12,18 +12,21 @@ struct ContentView: View {
     @State private var timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect();
     @State private var xVal = 0;
     @ObservedObject var midiController = MidiController.init();
+    var trackBuilder = TrackBuilder.init(midiUrl: URL(fileURLWithPath: "/Applications/Synthesia.app/Contents/Resources/beat44_clap.mid"));
+    
+    
     
     
     var body: some View {
         VStack{
             PlayButton(player : $midiController.player);
-            Track()
+            trackBuilder.build()
                 .offset(x: CGFloat(xVal))
                 .onReceive(timer, perform: { _ in
                     if (midiController.player.isPlaying) {
                         xVal -= 2;
                     }
-                });
+                }); //control horizontal movement
         }
         
         
