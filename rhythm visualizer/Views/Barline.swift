@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct Barline: View {
+    let WIDTH:CGFloat = 20;
+    let HEIGHT:CGFloat = 100;
+    
+    
     var body: some View {
         Rectangle()
-            .size(width: 50, height: 100)
-            .offset(x:0, y: 150.0)
+            .size(width: WIDTH, height: HEIGHT)
+            .offset(x: -WIDTH/2) //center used for positioning
             .fill(Color.black);
     }
 }

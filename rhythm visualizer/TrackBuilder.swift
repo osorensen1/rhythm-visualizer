@@ -27,7 +27,8 @@ class TrackBuilder {
     
     func build() -> Track {
         let notes = buildNotes(track: sequence.tracks[0]);
-        return Track(noteList: notes);
+        let barlines = buildBarlines(track: sequence.tracks[0])
+        return Track(noteList: notes, barlineList: barlines);
     }
     
     func buildNotes(track : MIKMIDITrack) -> [CGFloat] {
@@ -36,6 +37,18 @@ class TrackBuilder {
             notes.append(CGFloat(midiNote.timeStamp * BEAT_LENGTH));
         }
         return notes;
+    }
+    
+    func buildBarlines(track : MIKMIDITrack) -> [CGFloat]{
+        var barlines : [CGFloat] = [];
+        for i in stride(from: 0.0, through: track.length, by: 1.0) {
+            barlines.append(CGFloat(i * BEAT_LENGTH));
+        }
+        return barlines;
+    }
+    
+    func buildTrackBG(track : MIKMIDITrack) -> CGFloat {
+        return CGFloat(track.length * BEAT_LENGTH * 4); //assume constant 4/4 time
     }
     
 }

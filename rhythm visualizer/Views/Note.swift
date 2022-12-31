@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct Note: View {
-    var xPos : CGFloat;
+    let RADIUS:CGFloat = 50.0;
     
     var body: some View {
         Circle()
-            .size(CGSize(width: 10.0, height: 10.0))
-            .offset(x: xPos, y: /*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
+            .size(CGSize(width: RADIUS, height: RADIUS))
+            .offset (x: -RADIUS/2, y: -RADIUS/2); //circle's center is used for positioning
     }
 }
 
 struct Note_Previews: PreviewProvider {
     static var previews: some View {
-        Note(xPos: 200)
+        Note()
     }
 }

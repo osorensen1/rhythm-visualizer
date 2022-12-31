@@ -21,6 +21,7 @@ struct ContentView: View {
         VStack{
             PlayButton(player : $midiController.player);
             trackBuilder.build()
+                .frame(width: 1000, height: 500, alignment: .leading)
                 .offset(x: CGFloat(xVal))
                 .onReceive(timer, perform: { _ in
                     if (midiController.player.isPlaying) {

@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct TrackBG: View {
+    let HEIGHT:CGFloat = 100.0;
+    
     var body: some View {
         Rectangle()
-            .size(width: 800.0, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/)
-            .offset(x: 0, y: 150.0)
+            .size(width: 800.0, height: HEIGHT)
     }
 }
 
