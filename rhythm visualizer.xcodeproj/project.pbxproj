@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4709C85629649DD700F8CBF0 /* NoteParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4709C85529649DD700F8CBF0 /* NoteParameters.swift */; };
+		4709C85C2964A4C400F8CBF0 /* MidiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4709C85B2964A4C400F8CBF0 /* MidiController.swift */; };
 		473607282954CFEC009D6647 /* TrackBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473607272954CFEC009D6647 /* TrackBuilder.swift */; };
 		473608AF2954ED40009D6647 /* MIKMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473608A32954ECA8009D6647 /* MIKMIDI.framework */; };
 		473608B02954ED40009D6647 /* MIKMIDI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 473608A32954ECA8009D6647 /* MIKMIDI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -23,8 +25,6 @@
 		477AD7C429480ED10043E3A1 /* TrackBG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AD7C329480ED10043E3A1 /* TrackBG.swift */; };
 		477AD7CD294810CE0043E3A1 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AD7CC294810CE0043E3A1 /* PlayButton.swift */; };
 		47B85259294B98CF005FD19C /* mary.mid in Resources */ = {isa = PBXBuildFile; fileRef = 47B85258294B98CF005FD19C /* mary.mid */; };
-		47C0B10F294A6C5000E5005B /* MidiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0B10E294A6C5000E5005B /* MidiController.swift */; };
-		47E04F0429490D0800250E1C /* NoteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E04F0329490D0800250E1C /* NoteList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +80,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4709C85529649DD700F8CBF0 /* NoteParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteParameters.swift; sourceTree = "<group>"; };
+		4709C85B2964A4C400F8CBF0 /* MidiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MidiController.swift; path = ../../../../../.Trash/MidiController.swift; sourceTree = "<group>"; };
 		473607272954CFEC009D6647 /* TrackBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackBuilder.swift; sourceTree = "<group>"; };
 		473608982954ECA8009D6647 /* MIKMIDI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MIKMIDI.xcodeproj; path = Frameworks/MIKMIDI/Framework/MIKMIDI.xcodeproj; sourceTree = "<group>"; };
 		4770CD1E29464989008BDAC3 /* rhythm visualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rhythm visualizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,8 +104,6 @@
 		477AD7C329480ED10043E3A1 /* TrackBG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackBG.swift; sourceTree = "<group>"; };
 		477AD7CC294810CE0043E3A1 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		47B85258294B98CF005FD19C /* mary.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = mary.mid; path = ../../../../../Downloads/mary.mid; sourceTree = "<group>"; };
-		47C0B10E294A6C5000E5005B /* MidiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MidiController.swift; path = Views/MidiController.swift; sourceTree = "<group>"; };
-		47E04F0329490D0800250E1C /* NoteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,10 +174,9 @@
 		4770CD2029464989008BDAC3 /* rhythm visualizer */ = {
 			isa = PBXGroup;
 			children = (
-				47C0B10E294A6C5000E5005B /* MidiController.swift */,
+				4709C85B2964A4C400F8CBF0 /* MidiController.swift */,
 				473607272954CFEC009D6647 /* TrackBuilder.swift */,
 				47B85258294B98CF005FD19C /* mary.mid */,
-				47E04F0329490D0800250E1C /* NoteList.swift */,
 				4770CD2129464989008BDAC3 /* AppDelegate.swift */,
 				4770CD2329464989008BDAC3 /* ContentView.swift */,
 				477AD7C8294810940043E3A1 /* Views */,
@@ -224,6 +223,7 @@
 				4770CD58294667DC008BDAC3 /* Note.swift */,
 				4770CD5D29466BC3008BDAC3 /* Track.swift */,
 				477AD7CC294810CE0043E3A1 /* PlayButton.swift */,
+				4709C85529649DD700F8CBF0 /* NoteParameters.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -397,12 +397,12 @@
 				4770CD2429464989008BDAC3 /* ContentView.swift in Sources */,
 				477AD7CD294810CE0043E3A1 /* PlayButton.swift in Sources */,
 				4770CD632946727E008BDAC3 /* Barline.swift in Sources */,
-				47C0B10F294A6C5000E5005B /* MidiController.swift in Sources */,
-				47E04F0429490D0800250E1C /* NoteList.swift in Sources */,
+				4709C85629649DD700F8CBF0 /* NoteParameters.swift in Sources */,
 				4770CD5E29466BC3008BDAC3 /* Track.swift in Sources */,
 				477AD7C429480ED10043E3A1 /* TrackBG.swift in Sources */,
 				4770CD2229464989008BDAC3 /* AppDelegate.swift in Sources */,
 				4770CD59294667DC008BDAC3 /* Note.swift in Sources */,
+				4709C85C2964A4C400F8CBF0 /* MidiController.swift in Sources */,
 				473607282954CFEC009D6647 /* TrackBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

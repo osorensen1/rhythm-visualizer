@@ -8,24 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    //@State private var isPlaying: Bool = false;
     @State private var timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect();
-    @State private var xVal = 0;
+    @State private var xVal : Double = 0;
     @ObservedObject var midiController = MidiController.init();
-    var trackBuilder = TrackBuilder.init(midiUrl: URL(fileURLWithPath: "/Applications/Synthesia.app/Contents/Resources/beat44_clap.mid"));
-    
-    
-    
+    var trackBuilder = TrackBuilder();
+
     
     var body: some View {
         VStack{
             PlayButton(player : $midiController.player);
-            trackBuilder.build()
+            trackBuilder.build(midiURL : midiController.midiURL)
                 .frame(width: 1000, height: 500, alignment: .leading)
                 .offset(x: CGFloat(xVal))
                 .onReceive(timer, perform: { _ in
                     if (midiController.player.isPlaying) {
-                        xVal -= 2;
+                        xVal -= (trackBuilder.tempo * trackBuilder.BEAT_LENGTH * 0.05) / 60; //TODO var for TIMER_INTERVAL
                     }
                 }); //control horizontal movement
         }

@@ -8,33 +8,33 @@
 
 import Foundation;
 import MIKMIDI;
+import SwiftUI;
 
 
-class TrackBuilder {
-    var sequence : MIKMIDISequence;
-    var tempo : Double; //in beats per minute
-    final var BEAT_LENGTH = 100.0;
+struct TrackBuilder {
+    var BEAT_LENGTH = 100.0;
     
-    
-    
-    init (midiUrl : URL) {
-        sequence = try! MIKMIDISequence(fileAt: midiUrl);
-        tempo = sequence.tempo(atTimeStamp: 0.0); //assume constant tempo throughout
-        print(tempo);
-        
-        
+
+    init() {
+
     }
-    
-    func build() -> Track {
+         
+    func build(midiURL : URL) -> Track {
+        let sequence = try! MIKMIDISequence(fileAt: midiURL);
+        let tempo = sequence.tempo(atTimeStamp: 0.0); //assume constant tempo throughout
         let notes = buildNotes(track: sequence.tracks[0]);
         let barlines = buildBarlines(track: sequence.tracks[0])
         return Track(noteList: notes, barlineList: barlines);
     }
     
-    func buildNotes(track : MIKMIDITrack) -> [CGFloat] {
-        var notes : [CGFloat] = [];
+    func buildNotes(track : MIKMIDITrack) -> [NoteParameters] {
+        var notes : [NoteParameters] = [];
         for midiNote in track.notes {
-            notes.append(CGFloat(midiNote.timeStamp * BEAT_LENGTH));
+            notes.append(
+                NoteParameters(
+                    xPos: CGFloat(midiNote.timeStamp * BEAT_LENGTH)
+                )
+            );
         }
         return notes;
     }
