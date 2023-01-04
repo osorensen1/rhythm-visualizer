@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect();
-    @State private var xVal : Double = 0;
+    @State private var xVal : CGFloat = 0.0;
     @ObservedObject var midiController = MidiController.init();
     var trackBuilder = TrackBuilder();
 
@@ -22,7 +22,7 @@ struct ContentView: View {
                 .offset(x: CGFloat(xVal))
                 .onReceive(timer, perform: { _ in
                     if (midiController.player.isPlaying) {
-                        xVal -= (trackBuilder.tempo * trackBuilder.BEAT_LENGTH * 0.05) / 60; //TODO var for TIMER_INTERVAL
+                        xVal = -CGFloat(midiController.player.currentPosition) * trackBuilder.getSecondLength();
                     }
                 }); //control horizontal movement
         }

@@ -11,10 +11,11 @@ struct Track: View {
     let HEIGHT:CGFloat = 100.0;
     var noteList : [NoteParameters];
     var barlineList : [CGFloat];
+    var trackLength: CGFloat;
     
     var body: some View {
         ZStack {
-            TrackBG();
+            TrackBG(trackLength: trackLength);
             ForEach(barlineList, id: \.self) { barline in
                 Barline()
                     .offset(x: barline)
@@ -29,6 +30,6 @@ struct Track: View {
 
 struct Track_Previews: PreviewProvider {
     static var previews: some View {
-        Track(noteList: [NoteParameters(xPos: 100)], barlineList: [100.0, 200.0, 300.0, 400.0]);
+        Track(noteList: [NoteParameters(xPos: 100)], barlineList: [100.0, 200.0, 300.0, 400.0], trackLength: 500);
     }
 }
